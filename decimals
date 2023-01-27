@@ -1,0 +1,13 @@
+//show two decimal only insted of 8 without toFixed(2)
+
+export const showTwoDecimal = (amountVal) => {
+    let decimalVal = amountVal;
+    let updateVal = amountVal.toString();
+    if (updateVal.includes(".")) {
+      let getDicimal = updateVal.split(".");
+      let result = getDicimal[1].substring(0, 2);
+      decimalVal = getDicimal[0] + "." + result;
+    }
+    return decimalVal;
+  };
+  
