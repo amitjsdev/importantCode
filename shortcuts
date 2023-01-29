@@ -1,1 +1,4 @@
       const uniqueChars = data.filter((v, i, a) => a.findIndex((t) => t.full_name === v.full_name) === i);
+
+
+  let sno = page == 1 ? index + 1 : (page - 1) * pageLimit + index + 1;
