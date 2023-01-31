@@ -1,4 +1,12 @@
-      const uniqueChars = data.filter((v, i, a) => a.findIndex((t) => t.full_name === v.full_name) === i);
+     //get unique characters
+ const uniqueChars = data.filter((v, i, a) => a.findIndex((t) => t.full_name === v.full_name) === i);
 
-
+//serial no. pagination
   let sno = page == 1 ? index + 1 : (page - 1) * pageLimit + index + 1;
+
+//get parmameter value from url
+let url = https://example.com?apikey=dawdqw323d2
+let url = new URL(url);
+let apiKey = url.searchParams.get("apiKey");
+
+
