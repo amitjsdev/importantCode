@@ -9,4 +9,8 @@ let url = https://example.com?apikey=dawdqw323d2
 let url = new URL(url);
 let apiKey = url.searchParams.get("apiKey");
 
-
+//add values
+let addArr  = [1,3,3,4];
+     addValArr = item.reduce(function (index, item) {
+    return index + item
+    }, 0);
