@@ -38,10 +38,13 @@ var addArr  = [1,3,3,4];
 var val = [...new Set(addArr)];
 
 //regex
-var reg = new RegExp("^[0-9]*$");  //allow  only disgits
+var reg = /^[0-9\b]+$/.test(e.target.value) //allow  only disgits
 var reg2 = /^[a-zA-Z0-9]*$/; // allow alpha numeric
+if (/^[A-Za-z ]*$/.test(e.target.value)) {} //allow only alphabet  
+if (/^\d*(\.\d{0,2})?$/.test(event)) // allow only two decimal
+var number = /^\d*(\.\d{0,8})?$/; // allow only 8 decimal
 
-   if (/^[A-Za-z ]*$/.test(e.target.value)) {} //allow only alphabet  
+
 
 
 //change time format
@@ -74,3 +77,17 @@ var data = new Date(
 );
 return data;
 };
+
+
+//show two decimal only insted of 8 without toFixed(2)
+
+export const showTwoDecimal = (amountVal) => {
+    let decimalVal = amountVal;
+    let updateVal = amountVal.toString();
+    if (updateVal.includes(".")) {
+      let getDicimal = updateVal.split(".");
+      let result = getDicimal[1].substring(0, 2);
+      decimalVal = getDicimal[0] + "." + result;
+    }
+    return decimalVal;
+  };
