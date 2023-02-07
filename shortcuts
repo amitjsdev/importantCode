@@ -41,7 +41,7 @@ var val = [...new Set(addArr)];
 var reg = new RegExp("^[0-9]*$");  //allow  only disgits
 var reg2 = /^[a-zA-Z0-9]*$/; // allow alpha numeric
 
-   if (/^[A-Za-z ]*$/.test(e.target.value)) {} //allow only number  
+   if (/^[A-Za-z ]*$/.test(e.target.value)) {} //allow only alphabet  
 
 
 //change time format
@@ -55,7 +55,7 @@ var reg2 = /^[a-zA-Z0-9]*$/; // allow alpha numeric
     if (mm < 10) {
       mm = "0" + mm;
     }
-    today = yyyy + "-" + mm + "-" + dd;
+    today = yyyy + "-" + mm + "-" + dd; //2021-02-22
 
 
 //change date format UTC
