@@ -91,3 +91,8 @@ export const showTwoDecimal = (amountVal) => {
     }
     return decimalVal;
   };
+
+
+//allow number berfore decimals and after decimals
+let val = 23233.23232
+console.log(/^[0-9]{0,4}([.][0-9]{0,8})?$/.test(val))
