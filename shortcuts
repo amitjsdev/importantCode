@@ -31,3 +31,8 @@ let addArr  = [1,3,3,4];
       return newArr;
 
   };
+
+
+// Remove duplicate values from array using set
+var addArr  = [1,3,3,4];
+var val = [...new Set(addArr)];
