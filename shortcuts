@@ -117,3 +117,30 @@ cosnt output = users.reduce(function(acc,curr){
 },{)}
 
 //output : {3:2,4:1}
+
+
+slice returns a new array. In this we can pass two arguments first is starting index and the second is the end 
+of array element far from which you want  data.It will return before the second index.
+
+let arr = [1,4,5,3,4];
+let output = arr.slice(1,3);
+console.log(output) // [4,5]
+
+
+The splice method is allow us to remove,add or replace data from the array 
+let arr  = [3,4,6,6,5];
+let val = arr.splice(2,1);
+
+Above example remove value from the 2 index and remove one element after the 2 index.
+console.log(arr) //output : [3,4,6,5];
+console.log(val) // output: [6] it will show the remove value
+
+Now if we want to add some elemnt in array by using splice
+
+let val = arr.splice(2,0,'q'); // output: [3,4,q,6,6,5]; //add elemnt on index 2
+let val = arr.splice(2,1,'q'); // output: [3,4,q,6,5]; //replace element on place index 2
+
+
+
+
+
