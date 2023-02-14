@@ -141,6 +141,11 @@ let val = arr.splice(2,0,'q'); // output: [3,4,q,6,6,5]; //add elemnt on index 2
 let val = arr.splice(2,1,'q'); // output: [3,4,q,6,5]; //replace element on place index 2
 
 
+//using ref in react js
+const [changeBat, setChangeBat] = useState(false);
+  const changeBatRef = useRef(changeBat);
+  changeBatRef.current = changeBat;
+  setChangeBat(!changeBatRef.current);
 
 
 
