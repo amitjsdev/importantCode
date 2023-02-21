@@ -148,4 +148,15 @@ const [changeBat, setChangeBat] = useState(false);
   setChangeBat(!changeBatRef.current);
 
 
-
+//show widget 
+       let myWindow = window.open(
+          res?.data?.url,
+          "Payment gateway",
+          "toolbar=yes,scrollbars=yes,resizable=yes,top=200,left=600,width=500,height=500"
+        );
+        if (!!myWindow) {
+          myWindow.resizeBy(
+            600 - myWindow.innerWidth,
+            600 - myWindow.innerHeight
+          );
+        }
