@@ -39,3 +39,16 @@ if (expireTime.getTime() > currentTime.getTime()) {
 } else {
   setSeconds(checkSeconds);
 }
+
+
+//debounce
+try {
+    if (timeoutId) {
+      clearTimeout(timeoutId);
+    }
+    // Use setTimeout to delay API call
+    timeoutId = setTimeout(async () => {
+  //call api insite
+    }, debounceDelay);
+  } catch (error) {
+  }
