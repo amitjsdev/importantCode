@@ -49,7 +49,18 @@ var reg2 = /^[a-zA-Z0-9]*$/; // allow alpha numeric
 if (/^[A-Za-z ]*$/.test(e.target.value)) {} //allow only alphabet  
 if (/^\d*(\.\d{0,2})?$/.test(event)) // allow only two decimal
 var number = /^\d*(\.\d{0,8})?$/; // allow only 8 decimal
+/^\d*\.?\d*$/ // allow only number and decimal
 
+//add 0 before decimal
+      let newVal = currentData?.value
+          ? currentData?.value.includes(".")
+            ? currentData?.value.split(".")
+            : currentData?.value
+          : currentData?.value;
+        let valNumber = currentData?.value;
+        if (newVal[0] == "") {
+          valNumber = 0 + "." + newVal[1];
+        }
 
 
 
