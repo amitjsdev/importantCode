@@ -42,13 +42,22 @@ if (expireTime.getTime() > currentTime.getTime()) {
 
 
 //debounce
-try {
-    if (timeoutId) {
-      clearTimeout(timeoutId);
+
+
+  const handleProductList = async (p) => {
+    const debounceDelay = 1000;
+
+let timeoutId = null;
+    try {
+      if (timeoutId) {
+        clearTimeout(timeoutId);
+      }
+      // Use setTimeout to delay API call
+      timeoutId = setTimeout(async () => {
+          //call api insite
+      }, debounceDelay);
+    } catch (error) {
+      
     }
-    // Use setTimeout to delay API call
-    timeoutId = setTimeout(async () => {
-  //call api insite
-    }, debounceDelay);
-  } catch (error) {
-  }
+  };
+
