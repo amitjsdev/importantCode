@@ -138,6 +138,32 @@ const graph1 = new Graph();
 graph1.addVertex("A");
 graph1.addVertex("B");
 graph1.addVertex("C");
+
+///////////////////// pyramid
+let n = 5;
+
+for (let i = 0; i <= n; i++) {
+  let row = "";
+  for (let j = 1; j <= n - i; j++) {
+    row += " ";
+  }
+  for (let k = 1; k <= 2 * i + 1; k++) {
+    row += "*";
+  }
+  console.log(row);
+}
+
+
+for(let i = 0; i <= n; i++){
+    let row2="";
+    for(let j = 0;j <= i; j++){
+        row2 += " "
+    }
+    for(let k = 1; k <= (2 * (n - i) - 1); k++){
+        row2 += "*"
+    }
+    console.log(row2)
+}
 graph1.addVertex("D");
 graph1.addEdge("A", "C");
 graph1.addEdge("A", "D");
