@@ -138,6 +138,10 @@ const graph1 = new Graph();
 graph1.addVertex("A");
 graph1.addVertex("B");
 graph1.addVertex("C");
+graph1.addVertex("D");
+graph1.addEdge("A", "C");
+graph1.addEdge("A", "D");
+graph1.removeVertex("A");
 
 ///////////////////// pyramid
 let n = 5;
@@ -164,7 +168,3 @@ for(let i = 0; i <= n; i++){
     }
     console.log(row2)
 }
-graph1.addVertex("D");
-graph1.addEdge("A", "C");
-graph1.addEdge("A", "D");
-graph1.removeVertex("A");
